@@ -413,7 +413,7 @@ export function ProjectWorkflow() {
         {projects.map((p) => (
           <div
             key={p.name}
-            className="w-full overflow-x-auto rounded-xl border border-[#1e2d45] bg-[#111827]"
+            className="w-full max-w-full overflow-x-auto rounded-xl border border-[#1e2d45] bg-[#111827]"
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             {/* scrollbar styling */}
