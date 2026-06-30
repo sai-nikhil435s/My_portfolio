@@ -27,11 +27,13 @@ export function Projects() {
     if (willOpen && event) {
       const card = event.currentTarget.closest("[data-project-card]") as HTMLElement | null;
       if (card) {
-        setTimeout(() => {
-          const headerOffset = 90;
-          const top = card.getBoundingClientRect().top + window.scrollY - headerOffset;
-          window.scrollTo({ top, behavior: "smooth" });
-        }, 50);
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            const headerOffset = 90;
+            const top = card.getBoundingClientRect().top + window.scrollY - headerOffset;
+            window.scrollTo({ top, behavior: "smooth" });
+          }, 350); // wait for the 300ms expand animation to finish
+        });
       }
     }
   };
