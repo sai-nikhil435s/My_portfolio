@@ -208,7 +208,7 @@ export function Hero() {
             <div className="flex gap-3">
               <div className="relative shrink-0">
                 <img
-                  src="Projects/passport_photo.png"
+                  src="/projects/passport_photo.png"
                   alt="Sai Nikhil"
                   className="h-20 w-20 rounded-full object-cover object-top ring-4 ring-violet-500/30"
                 />
