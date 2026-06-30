@@ -293,7 +293,7 @@ export function GitHubOpenSource() {
               {/* Gradient CTA pill — desktop hover only, hidden on mobile to save space */}
               <div className="relative mt-2 sm:mt-3">
               <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${repo.gradient} px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-black text-white shadow-md opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}>
-                View Project <ArrowUpRight className="h-3 w-3" />
+                View Repository <ArrowUpRight className="h-3 w-3" />
               </span>
             </div>
             </a>

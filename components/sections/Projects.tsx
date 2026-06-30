@@ -19,9 +19,21 @@ export function Projects() {
     });
   }, [category]);
 
-  const handleSelect = (project: Project) => {
+    const handleSelect = (project: Project, event?: React.MouseEvent<HTMLButtonElement>) => {
     setSelected(project);
-    setMobileExpanded(mobileExpanded === project.name ? null : project.name);
+    const willOpen = mobileExpanded !== project.name;
+    setMobileExpanded(willOpen ? project.name : null);
+
+    if (willOpen && event) {
+      const card = event.currentTarget.closest("[data-project-card]") as HTMLElement | null;
+      if (card) {
+        setTimeout(() => {
+          const headerOffset = 90;
+          const top = card.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }, 50);
+      }
+    }
   };
 
   return (
@@ -83,6 +95,7 @@ export function Projects() {
           return (
             <motion.div
               key={project.name}
+              data-project-card
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
@@ -97,7 +110,7 @@ export function Projects() {
             >
               {/* Card header — always visible */}
               <button
-                onClick={() => handleSelect(project)}
+                onClick={(e) => handleSelect(project, e)}
                 className="w-full bg-white/70 p-4 text-left dark:bg-slate-900/60"
               >
                 <div className="flex items-center justify-between gap-3">
