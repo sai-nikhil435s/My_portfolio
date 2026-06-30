@@ -252,7 +252,7 @@ export function GitHubOpenSource() {
               href={repo.url ?? `https://github.com/${username}/${repo.name}`}
               target="_blank"
               rel="noreferrer"
-              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-2.5 sm:p-4 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950/40 focus-ring ${repo.borderHover} ${repo.glowColor}`}
+              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-2.5 sm:p-4 transition-all duration-300 hover:-translate-y-1.5 active:scale-[0.97] hover:shadow-xl dark:border-slate-800 dark:bg-slate-950/40 focus-ring ${repo.borderHover} ${repo.glowColor}`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${repo.gradient} opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07] rounded-2xl`} />
               <div className={`absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r ${repo.gradient} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
@@ -291,11 +291,11 @@ export function GitHubOpenSource() {
               </div>
 
               {/* Gradient CTA pill — desktop hover only, hidden on mobile to save space */}
-              <div className="relative mt-2 sm:mt-3 hidden sm:block">
-                <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${repo.gradient} px-4 py-1.5 text-xs font-black text-white shadow-md opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}>
-                  {repo.label} <ArrowUpRight className="h-3 w-3" />
-                </span>
-              </div>
+              <div className="relative mt-2 sm:mt-3">
+              <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${repo.gradient} px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-black text-white shadow-md opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}>
+                View Project <ArrowUpRight className="h-3 w-3" />
+              </span>
+            </div>
             </a>
           ))}
         </div>
