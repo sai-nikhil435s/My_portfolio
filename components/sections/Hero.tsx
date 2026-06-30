@@ -45,7 +45,7 @@ const whatIDo = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-hero-glow pt-28">
+    <section id="top" className="relative min-h-screen overflow-x-hidden bg-hero-glow pt-28">
       <div className="absolute inset-0 bg-radial-grid bg-[length:28px_28px] opacity-30" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl min-w-0 px-4 pb-16 sm:px-6 lg:px-8">
