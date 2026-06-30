@@ -386,6 +386,7 @@ export function ResumeAndAchievements() {
             </p>
             <div className="rounded-2xl border border-slate-200 bg-white/60 p-4 dark:border-slate-800 dark:bg-slate-950/40">
               <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0"></div>
                 <div>
                   <p className="font-black">AI/ML Project Developer</p>
                   <p className="mt-0.5 text-xs text-brand-500 dark:text-brand-400">Self-Driven · Academic Projects</p>
@@ -411,9 +412,9 @@ export function ResumeAndAchievements() {
             </p>
             <div className="rounded-2xl border border-slate-200 bg-white/60 p-4 dark:border-slate-800 dark:bg-slate-950/40">
               <div className="flex items-start justify-between gap-2">
-                <div>
+                <div className="min-w-0">
                   <p className="font-black">B.Tech – Computer Engineering (AI)</p>
-                  <p className="mt-0.5 text-xs text-brand-500 dark:text-brand-400">Marwadi University</p>
+                   <p className="mt-0.5 text-xs text-brand-500 dark:text-brand-400">Marwadi University</p>
                 </div>
                 <span className="shrink-0 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
                   2022 – 2026
@@ -435,7 +436,7 @@ export function ResumeAndAchievements() {
                   className="group flex gap-3 rounded-xl border border-slate-200 bg-white/50 px-4 py-2.5 transition-all duration-200 hover:border-brand-400/40 hover:bg-brand-50/20 dark:border-slate-800 dark:bg-slate-950/30 dark:hover:bg-brand-950/20"
                 >
                   <span className="w-24 shrink-0 text-xs font-black text-slate-500 dark:text-slate-400">{label}</span>
-                  <span className="text-xs leading-5 text-slate-700 dark:text-slate-300">{value}</span>
+                  <span className="min-w-0 flex-1 text-xs leading-5 text-slate-700 dark:text-slate-300">{value}</span>
                 </div>
               ))}
             </div>
@@ -591,12 +592,12 @@ export function Contact() {
             </p>
           </div>
           <a
-            href={`https://mail.google.com/mail/?view=cm&to=${profile.email}&su=Portfolio Inquiry`}
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-8 py-4 text-lg font-black text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/30"
-          >
-            <Mail className="h-5 w-5" />
-            {profile.email}
-          </a>
+           href={`https://mail.google.com/mail/?view=cm&to=${profile.email}&su=Portfolio Inquiry`}
+              className="inline-flex max-w-full items-center gap-3 break-all rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-4 text-base sm:text-lg font-black text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/30"
+             >
+              <Mail className="h-5 w-5 shrink-0" />
+              {profile.email}
+           </a>
           <div className="flex flex-wrap justify-center gap-3 mt-2">
             <a
               href={profile.linkedin}
