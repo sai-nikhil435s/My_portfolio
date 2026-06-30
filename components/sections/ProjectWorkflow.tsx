@@ -411,11 +411,11 @@ export function ProjectWorkflow() {
       {/* Rows — on mobile each row scrolls horizontally */}
       <div className="flex flex-col gap-2.5">
         {projects.map((p) => (
-          <div
-            key={p.name}
-            className="w-full max-w-full overflow-x-auto rounded-xl border border-[#1e2d45] bg-[#111827]"
-            style={{ WebkitOverflowScrolling: "touch" }}
-          >
+        <div
+          key={p.name}
+          className="w-full min-w-0 overflow-x-auto rounded-xl border border-[#1e2d45] bg-[#111827]"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
             {/* scrollbar styling */}
             <style>{`
               .pw-row::-webkit-scrollbar { height: 3px; }
@@ -444,7 +444,7 @@ export function ProjectWorkflow() {
               </div>
 
               {/* Pipeline — stretches to fill on desktop, scrolls on mobile */}
-              <div className="flex flex-1 items-center" style={{ minWidth: 420 }}>
+              <div className="flex flex-1 items-center min-w-0">
                 {p.steps.map((step, i) => (
                   <div key={i} className="flex flex-1 items-center">
                     {step.node}

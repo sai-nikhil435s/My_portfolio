@@ -78,7 +78,10 @@ img, svg {
     linear-gradient(135deg, rgba(255,255,255,0.86), rgba(255,255,255,0.55)),
     radial-gradient(circle at top left, rgba(46,168,255,0.16), transparent 36%);
 }
-
+/* Prevent flex/grid children from overflowing on mobile */
+section, .glass, [class*="overflow-x-auto"] {
+  min-width: 0;
+}
 html, body {
   overscroll-behavior-x: none;
   touch-action: pan-y;
