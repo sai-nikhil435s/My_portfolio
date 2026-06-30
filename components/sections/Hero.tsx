@@ -126,8 +126,8 @@ export function Hero() {
             {/* Photo + name row */}
             <div className="flex items-start gap-5">
               <div className="relative shrink-0">
-                <img
-                  src="Projects/passport_photo.png"
+                <img 
+                  src="projects/passport_photo.png"
                   alt="Sai Nikhil Mamidi"
                   className="h-40 w-40 rounded-full object-cover object-top ring-4 ring-brand-500/30"
                 />
