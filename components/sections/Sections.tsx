@@ -292,7 +292,7 @@ export function GitHubOpenSource() {
 
               {/* Gradient CTA pill — desktop hover only, hidden on mobile to save space */}
               <div className="relative mt-2 sm:mt-3 hidden sm:block">
-                <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${repo.gradient} px-4 py-1.5 text-xs font-black text-white shadow-md opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0`}>
+                <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${repo.gradient} px-4 py-1.5 text-xs font-black text-white shadow-md opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}>
                   {repo.label} <ArrowUpRight className="h-3 w-3" />
                 </span>
               </div>
@@ -479,7 +479,7 @@ export function ResumeAndAchievements() {
                   href={url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-400/40 dark:border-slate-800 dark:bg-slate-950/40 focus-ring"
+                  className="group flex w-full min-w-0 items-center gap-4 rounded-2xl border border-slate-200 bg-white/50 p-4 transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-md hover:border-brand-400/40 dark:border-slate-800 dark:bg-slate-950/40 focus-ring"
                 >
                   <div className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${gradient} text-white shadow-sm transition-transform duration-300 group-hover:scale-110`}>
                     <Award className="h-5 w-5" />
@@ -492,7 +492,7 @@ export function ResumeAndAchievements() {
                     <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                       {year}
                     </span>
-                    <ArrowUpRight className="h-4 w-4 text-slate-400 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-brand-500" />
+                    <ArrowUpRight className="h-4 w-4 text-slate-400 opacity-60 transition-all duration-200 group-hover:opacity-100 group-hover:text-brand-500 group-active:opacity-100 group-active:text-brand-500" />
                   </div>
                 </a>
               ))}
